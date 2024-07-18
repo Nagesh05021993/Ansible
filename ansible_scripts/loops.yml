@@ -1,0 +1,22 @@
+#loop, with_items
+
+---
+- name: user creation
+  hosts: all
+  become: true
+
+  tasks:
+  - name: create user
+    ansible.builtin.user:
+      name: "{{ item }}"
+    loop:
+      - ram
+      - ravi
+      - raju
+
+
+---
+- name: user creation
+  hosts: all
+  become: true
+

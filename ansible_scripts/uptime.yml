@@ -1,0 +1,12 @@
+---
+- name: shell commands
+  hosts: all
+  become: true
+  tasks: 
+  - name: check uptime
+    shell:
+      "uptime"
+    register: uptime1
+
+  - debug:
+      msg: "{{uptime1.stdout}}"

@@ -1,0 +1,10 @@
+--- 
+- name: apache installation
+  hosts: all
+  tasks:
+  - name: apache install
+    ansible.builtin.yum_repository:
+      name: httpd
+      state: present
+
+  - name: 
